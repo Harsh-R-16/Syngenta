@@ -16,3 +16,14 @@ h1 {
   background-color: #000;
   color: #fff;
 }
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 15px;
+}
+
+li {
+  font-size: 12px;
+  margin: 10px 30px;
+}

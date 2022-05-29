@@ -13,9 +13,9 @@ app.options("*", cors());
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
 
-// let db = "mongodb://localhost:27017/harsh-gajera";
 let db =
-  "mongodb+srv://harsh-gajera:harsh-gajera@cluster0.brvri.mongodb.net/?retryWrites=true&w=majority/harsh-gajera";
+  "mongodb+srv://harsh-gajera:harsh-gajera@cluster0.brvri.mongodb.net/?retryWrites=true&w=majority";
+
 mongoose
   .connect(db, {
     useNewUrlParser: true,
