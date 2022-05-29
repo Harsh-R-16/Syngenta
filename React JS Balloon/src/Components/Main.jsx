@@ -1,15 +1,15 @@
 import React from "react";
 import "./Main.css";
-const colors = [
-  "#2ebcd2",
-  "#54bd68",
-  "#ff8b24",
-  "#3333ff",
-  "#ffc600",
-  "#fe654f",
-];
 
 export default function Main() {
+  const [colors, setColors] = React.useState([
+    "#2ebcd2",
+    "#54bd68",
+    "#ff8b24",
+    "#3333ff",
+    "#ffc600",
+    "#fe654f",
+  ]);
   const [c, setC] = React.useState(0);
   const [value, setValue] = React.useState("");
 
@@ -32,6 +32,10 @@ export default function Main() {
       divs[1].classList.remove("display");
       setC((c) => c + 1);
     }
+  };
+
+  const colorsHandler = () => {
+    setColors(randomColor());
   };
 
   return (
@@ -58,10 +62,13 @@ export default function Main() {
         >
           <option value="">Select</option>
           {colors.map((i, index) => (
-            <option value={index + 1}>{index + 1}</option>
+            <option value={index + 1} key={i}>
+              {index + 1}
+            </option>
           ))}
         </select>
         <button onClick={btnHandler}>Shoot</button>
+        <button onClick={colorsHandler}>Change Colors</button>
       </div>
       <section>
         <h3>{c} Balloons</h3>
@@ -79,4 +86,21 @@ export default function Main() {
       </section>
     </main>
   );
+}
+
+function randomColor() {
+  let colors = [];
+  for (let i = 0; i < 6; i++) {
+    colors.push(random());
+  }
+  return colors;
+}
+
+function random() {
+  let str = "0123456789ab";
+  let res = "";
+  for (let i = 0; i < 6; i++) {
+    res += str[Math.floor(Math.random() * 12)];
+  }
+  return "#" + res;
 }
