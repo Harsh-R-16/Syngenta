@@ -1,0 +1,66 @@
+#food-cart h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+  margin: 20px;
+  position: relative;
+}
+
+#food-cart section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px 0;
+}
+
+#food-cart section div {
+  width: 470px;
+  margin: 20px 15px;
+  border-radius: 3px;
+  box-shadow: 4px 4px 7px 2px #bbbbbb;
+}
+
+#food-cart img {
+  width: 150px;
+  margin-right: 15px !important;
+  float: left;
+}
+
+#food-cart span {
+  font-weight: bold;
+  margin: 0px !important;
+}
+
+#food-cart section div * {
+  font-size: 15px;
+  margin: 8px;
+}
+
+#food-cart .quantity {
+  width: 20px;
+  aspect-ratio: 1;
+  margin: 0 6px;
+  background-color: inherit;
+  border: none;
+  color: red;
+  font-size: 16px !important;
+}
+
+#food-cart button {
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  padding: 3px 7px;
+  font-size: 13px !important;
+}
+
+#place-order {
+  border: none !important;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px 0 30px;
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 15px !important;
+}

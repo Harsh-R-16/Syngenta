@@ -1,0 +1,68 @@
+#main-food h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+  margin: 20px;
+  position: relative;
+}
+
+#main-food h1 a {
+  position: absolute;
+  color: red;
+  right: 2vw;
+  font-size: 14px;
+  top: 7px;
+  text-decoration: none;
+}
+
+#main-food #filter-food {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+
+#main-food #filter-food select {
+  margin-left: 5px;
+  width: 200px;
+  padding: 4px 7px;
+  margin: 10px 5px;
+}
+
+#main-food section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px 0;
+}
+
+#main-food section div {
+  width: 300px;
+  margin: 15px;
+  border-radius: 3px;
+  box-shadow: 4px 4px 7px 2px #bbbbbb;
+  padding-bottom: 10px;
+}
+
+#main-food img {
+  width: 100%;
+  margin: 0px !important;
+}
+
+#main-food span {
+  font-weight: bold;
+  margin: 0px !important;
+}
+
+#main-food section div * {
+  font-size: 15px;
+  margin: 7px 8px;
+}
+
+#main-food section div button {
+  width: 284px;
+  padding: 5px 0;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 4px;
+}

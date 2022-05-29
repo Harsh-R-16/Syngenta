@@ -1,12 +1,8 @@
-import Main from "./Components/Main.jsx";
+import AllRoutes from "./Components/All Routes/AllRoutes";
 import "./App.css";
 
 function App() {
-  return (
-    <>
-      <Main />
-    </>
-  );
+  return <AllRoutes />;
 }
 
 export default App;
