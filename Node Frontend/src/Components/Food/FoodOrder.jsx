@@ -18,7 +18,7 @@ export default function FoodOrder() {
   }
   return (
     <main id="food-order">
-      <h1>Order Page</h1>
+      <h1 className="h1">Order Page</h1>
       <h2>Order Accepted</h2>
       <h2>Cooking in Progress</h2>
       <h2>Out for Delivery</h2>

@@ -11,3 +11,20 @@
 body {
   background-color: #f1f5f8;
 }
+
+.h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+  margin: 20px;
+  position: relative;
+}
+
+.h1 a {
+  position: absolute;
+  color: red;
+  right: 2vw;
+  font-size: 14px;
+  top: 7px;
+  text-decoration: none;
+}

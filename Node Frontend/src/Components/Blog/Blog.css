@@ -1,0 +1,45 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px 0;
+}
+
+#main-blog section div {
+  width: 620px;
+  margin: 15px;
+  border-radius: 3px;
+  box-shadow: 4px 4px 7px 2px #bbbbbb;
+  padding: 10px;
+}
+
+#main-blog img {
+  width: 100%;
+  margin: 0px !important;
+}
+
+#main-blog span {
+  font-weight: bold;
+  margin: 0px !important;
+}
+
+#main-blog section div * {
+  font-size: 15px;
+  margin: 8px;
+  line-height: 21px;
+}
+
+#main-blog .like {
+  float: left;
+  transform: translateY(5px);
+  color: red;
+  margin-right: 0;
+}
+
+#main-blog button {
+  padding: 5px 0;
+  width: 70px;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 4px;
+}

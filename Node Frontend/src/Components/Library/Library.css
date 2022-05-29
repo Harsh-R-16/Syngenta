@@ -1,51 +1,41 @@
-#main-food #filter-food {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 15px;
-}
-
-#main-food #filter-food select {
-  margin-left: 5px;
-  width: 200px;
-  padding: 4px 7px;
-  margin: 10px 5px;
-}
-
-#main-food section {
+#main-library section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 25px 0;
 }
 
-#main-food section div {
+#main-library section div {
   width: 300px;
   margin: 15px;
   border-radius: 3px;
   box-shadow: 4px 4px 7px 2px #bbbbbb;
-  padding-bottom: 10px;
+  padding-bottom: 48px;
+  position: relative;
 }
 
-#main-food img {
+#main-library img {
   width: 100%;
   margin: 0px !important;
 }
 
-#main-food span {
+#main-library span {
   font-weight: bold;
   margin: 0px !important;
 }
 
-#main-food section div * {
-  font-size: 15px;
+#main-library section div * {
+  font-size: 14px;
+  line-height: 20px;
   margin: 7px 8px;
 }
 
-#main-food section div button {
+#main-library section div button {
   width: 284px;
   padding: 5px 0;
   background-color: #fff;
   border: 1px solid #c6c6c6;
   border-radius: 4px;
+  position: absolute;
+  bottom: 5px;
 }

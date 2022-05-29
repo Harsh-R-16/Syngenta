@@ -23,7 +23,7 @@ export default function FoodCart() {
   }, [foodCart]);
   return (
     <main id="food-cart">
-      <h1>Your Cart ({foodCart.length})</h1>
+      <h1 className="h1">Your Cart ({foodCart.length} Items)</h1>
       <section>
         {foods.map((food, index) => (
           <Div {...food} key={index} />

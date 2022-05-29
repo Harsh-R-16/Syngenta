@@ -40,7 +40,7 @@ export default function Food() {
 
   return (
     <main id="main-food">
-      <h1>
+      <h1 className="h1">
         Food Api
         <Link to="/food/cart">Your Cart</Link>
       </h1>

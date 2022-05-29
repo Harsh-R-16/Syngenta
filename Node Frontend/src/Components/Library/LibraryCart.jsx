@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "./Library.css";
 
-export default function Book() {
+export default function LibraryCart() {
   const [books, setBooks] = useState([]);
 
   let bookCart;
@@ -16,34 +14,24 @@ export default function Book() {
     fetch("https://harsh-gajera.herokuapp.com/libraryApi/books")
       .then((res) => res.json())
       .then((res) => {
-        setBooks(res.data);
-        console.log(res.data);
+        let newBooks = res.data.filter((i) => bookCart.includes(i._id));
+        setBooks(newBooks);
       });
-  }, []);
+  }, [bookCart]);
 
   const cartHandler = (e) => {
-    console.log(e.target.id);
-    if (!bookCart.includes(e.target.id)) {
-      e.target.innerHTML = "Already in List";
-      bookCart.push(e.target.id);
-      localStorage.setItem("bookCart", JSON.stringify(bookCart));
-    }
+    bookCart.splice(bookCart.indexOf(e.target.id), 1);
+    localStorage.setItem("bookCart", JSON.stringify(bookCart));
   };
 
   return (
     <main id="main-library">
-      <h1 className="h1">
-        Library Api
-        <Link to="/library/cart">Your Books</Link>
-      </h1>
+      <h1 className="h1">Your Books ({bookCart.length} Items)</h1>
+
       <section>
         {books.map(({ _id, img, title, author, category }) => (
           <div key={_id}>
-            <img
-              src={`${img}/${Math.random()}`}
-              alt=""
-              style={{ height: "300px" }}
-            />
+            <img src={`${img}`} alt="" style={{ height: "300px" }} />
             <p>
               <span>Title:</span>{" "}
               {title.length < 56 ? title : `${title.slice(0, 52)}...`}
@@ -59,11 +47,8 @@ export default function Book() {
             <p>
               <span>Category:</span> {category || "All Category"}
             </p>
-            {/* <p>
-              <span>Location:</span> {book.location}
-            </p> */}
             <button id={_id} onClick={cartHandler}>
-              {bookCart.includes(_id) ? "Already in List" : "Add to List"}
+              Remove from List
             </button>
           </div>
         ))}
