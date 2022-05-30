@@ -46,7 +46,7 @@ function Div({ _id, title, author, description, labels, likes }) {
         <span>Description:</span> {description}
       </p>
       <p>
-        <span>Labels:</span> {labels.join(" ")}
+        <span>Labels:</span> {labels.join(", ")}
       </p>
       <p className="like">{c} Likes</p>
       <button onClick={clickHandler} id={_id}>
