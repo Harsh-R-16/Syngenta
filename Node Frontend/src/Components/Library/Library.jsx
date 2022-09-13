@@ -17,12 +17,10 @@ export default function Book() {
       .then((res) => res.json())
       .then((res) => {
         setBooks(res.data);
-        console.log(res.data);
       });
   }, []);
 
   const cartHandler = (e) => {
-    console.log(e.target.id);
     if (!bookCart.includes(e.target.id)) {
       e.target.innerHTML = "Already in List";
       bookCart.push(e.target.id);

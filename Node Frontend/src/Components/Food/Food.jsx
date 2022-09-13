@@ -30,7 +30,6 @@ export default function Food() {
   };
 
   const cartHandler = (e) => {
-    console.log(e.target.id);
     if (!foodCart.includes(e.target.id)) {
       e.target.innerHTML = "Already in Cart";
       foodCart.push(e.target.id);
