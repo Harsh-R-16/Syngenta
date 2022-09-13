@@ -9,7 +9,6 @@ exports.home = (req, res) => {
 
 exports.getBlogs = async (req, res) => {
   try {
-    console.log(req.query);
     const { title, author } = req.query;
     const regex = [new RegExp(title, "i"), new RegExp(author, "i")];
     let allBlogs;

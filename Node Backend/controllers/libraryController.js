@@ -9,7 +9,6 @@ exports.home = (req, res) => {
 
 exports.getBooks = async (req, res) => {
   try {
-    console.log(req.query);
     const { title, author, category } = req.query;
     const regex = [
       new RegExp(title, "i"),
